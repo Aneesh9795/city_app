@@ -1,3 +1,4 @@
+import 'package:city_app/screens/auth_list.dart';
 import 'package:city_app/screens/dropdown_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
       ),
-      home: const DropdownScreen(),
+      home: const AuthList(),
     );
   }
 }

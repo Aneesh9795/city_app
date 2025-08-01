@@ -23,6 +23,7 @@ class _DropdownScreenState extends State<DropdownScreen> {
         child: Column(
           children: [
             TypeAheadField<CityModel>(
+              debounceDuration: const Duration(milliseconds: 200), // ✅ custom debounce here
               textFieldConfiguration: TextFieldConfiguration(
                 controller: _controller,
                 decoration: const InputDecoration(
