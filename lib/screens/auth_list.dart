@@ -124,7 +124,7 @@ class _AuthListState extends State<AuthList> {
           icon: const Icon(Icons.arrow_forward),
           label: const Text("Go to Next Screen"),
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.green,
             minimumSize: const Size.fromHeight(50), // full-width button
           ),
         ),

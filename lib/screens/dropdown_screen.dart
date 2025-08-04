@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import '../models/city_model.dart';
 import '../apis/api_service.dart';
+import 'cit_list.dart';
 
 class DropdownScreen extends StatefulWidget {
   const DropdownScreen({Key? key}) : super(key: key);
@@ -17,7 +18,10 @@ class _DropdownScreenState extends State<DropdownScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('City Search')),
+      appBar: AppBar(title: const Text('City Search'),
+        backgroundColor: Colors.green,
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -71,6 +75,26 @@ class _DropdownScreenState extends State<DropdownScreen> {
           ],
         ),
       ),
+      bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(12),
+        child: ElevatedButton.icon(
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const CityList()),
+            );
+
+          },
+          icon: const Icon(Icons.arrow_forward),
+          label: const Text("Go to Next Screen"),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green,
+            minimumSize: const Size.fromHeight(50),
+            ),
+        ),
+      )
     );
   }
 }
+
+
